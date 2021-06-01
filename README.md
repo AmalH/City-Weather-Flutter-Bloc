@@ -8,7 +8,7 @@ The repo also mocks a very **basic cruds system** around the FibonacciSet entity
 As an example of **securing a REST endpoint**, this repo uses the **[Magic Admin PHP SDK](https://github.com/magiclabs/magic-admin-php)**
  to disable unauthorized users from consuming some endpoints.
 
-### Prerequisites
+## Prerequisites
 
 - [PHP](https://www.php.net/downloads.php)
 - [MySQL](https://www.mysql.com/downloads/)
@@ -18,7 +18,7 @@ As an example of **securing a REST endpoint**, this repo uses the **[Magic Admin
 
 ## Configuring the application
 
-- ###Creating a MySQL database and user for the project.
+- ### Creating a MySQL database and user for the project.
 
 ```php
 CREATE DATABASE fibonacci_task CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -26,7 +26,7 @@ CREATE DATABASE fibonacci_task CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ...
 ```
 
-- ###Creating the `fibonacci_sets` table
+- ### Creating the `fibonacci_sets` table
 
 ```php
 CREATE TABLE `fibonacci_sets` (
@@ -42,13 +42,20 @@ CREATE TABLE `fibonacci_sets` (
 <img src="https://raw.githubusercontent.com/AmalH/FibonacciTask/master/readmeScreenshots/database.png"/>
 </p>
 
-- ###Setting up a Magic Admin PHP SDK account and extracting the API key and secret values
+- ### Setting up a Magic Admin PHP SDK account and extracting the API key and secret values
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/AmalH/FibonacciTask/master/readmeScreenshots/magic_dashboard.png"/>
 </p>
 
-- ###Setting up the `.env` file and entering the database and the Magic SDK secret key.
+- ### Setting up the `.env` file and entering the database and the Magic SDK secret key.
+- ### Running the PHP server to use and test the API
+ 
+```php
+php -S localhost:8000 -t fibonacci_api
+...
+...
+```
 
 ## API Endpoints
 
