@@ -53,8 +53,6 @@ CREATE TABLE `fibonacci_sets` (
  
 ```php
 php -S localhost:8000 -t fibonacci_api
-...
-...
 ```
 
 ## API Endpoints
@@ -73,7 +71,7 @@ This step required getting the authentication token to test a bearer token autha
 
 Below are a few screenshots of the final result:
 
-- #### GET /fibonacciSet/9 : get nth fibonnacci number of 9
+- ### GET /fibonacciSet/9 : get nth fibonnacci number of 9
 
 If no corresponding number/nthFib entry exists, we calulate the nth fibonacci of n using the helper class **[NthFibonacciCalculator](https://github.com/AmalH/FibonacciTask/src/Helpers/NthFibonacciCalculator.php)** and add a new entry to our database
 
@@ -81,13 +79,13 @@ If no corresponding number/nthFib entry exists, we calulate the nth fibonacci of
 <img src="https://raw.githubusercontent.com/AmalH/FibonacciTask/master/readmeScreenshots/get_fibonacci_of_9.png"/>
 </p>
 
-- #### POST /fibonacciSet
+- ### POST /fibonacciSet
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/AmalH/FibonacciTask/master/readmeScreenshots/post_fibonacciSet.png"/>
 </p>
 
-- #### PUT /fibonacciSet/ : 
+- ### PUT /fibonacciSet/ : 
 
 let's update the nth fibonnaci of 9 that we added with the GET method to a wrong value !
 
