@@ -1,9 +1,9 @@
 # Nth Fibonacci Number as a Restful API
 
-This repo presents a simple php implementation of the nth fibonacci number problem.
-It exposes this implementation as a consumable REST endpoint.
+This repo presents **a simple php implementation** of the nth fibonacci number problem.
+It **exposes this implementation as a consumable REST endpoint**.
 
-The repo also mocks a very basic cruds system around the FibonacciSet entity. (a FibonacciSet is: {a number, its nth fibonacci number})
+The repo also mocks a very **basic cruds system** around the FibonacciSet entity. (a FibonacciSet is: {a number, its nth fibonacci number})
 
 As an example of **securing a REST endpoint**, this repo uses the **[Magic Admin PHP SDK](https://github.com/magiclabs/magic-admin-php)**
  to disable unauthorized users from consuming some endpoints.
@@ -13,12 +13,12 @@ As an example of **securing a REST endpoint**, this repo uses the **[Magic Admin
 - [PHP](https://www.php.net/downloads.php)
 - [MySQL](https://www.mysql.com/downloads/)
 - [Composer](http://getcomposer.org/)
-- [Magic Admin PHP SDK Account](https://github.com/magiclabs/magic-admin-php)
+- [Magic Admin PHP SDK](https://github.com/magiclabs/magic-admin-php)
 - [Postman](https://www.postman.com/downloads/)
 
-### Configuring the application
+## Configuring the application
 
-- Creating a MySQL database and user for the project.
+- ###Creating a MySQL database and user for the project.
 
 ```php
 CREATE DATABASE fibonacci_task CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -26,7 +26,7 @@ CREATE DATABASE fibonacci_task CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ...
 ```
 
-- Creating the `fibonacci_sets` table
+- ###Creating the `fibonacci_sets` table
 
 ```php
 CREATE TABLE `fibonacci_sets` (
@@ -42,13 +42,13 @@ CREATE TABLE `fibonacci_sets` (
 <img src="https://raw.githubusercontent.com/AmalH/FibonacciTask/master/readmeScreenshots/database.png"/>
 </p>
 
-- Setting up a Magic Admin PHP SDK account and extracting the API key and secret values
+- ###Setting up a Magic Admin PHP SDK account and extracting the API key and secret values
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/AmalH/FibonacciTask/master/readmeScreenshots/magic_dashboard.png"/>
 </p>
 
-- Setting up the `.env` file and entering the database and the Magic SDK secret key.
+- ###Setting up the `.env` file and entering the database and the Magic SDK secret key.
 
 ## API Endpoints
 
@@ -66,7 +66,7 @@ This step required getting the authentication token to test a bearer token autha
 
 Below are a few screenshots of the final result:
 
-- GET /fibonacciSet/9 : get nth fibonnacci number of 9
+- #### GET /fibonacciSet/9 : get nth fibonnacci number of 9
 
 If no corresponding number/nthFib entry exists, we calulate the nth fibonacci of n using the helper class **[NthFibonacciCalculator](https://github.com/AmalH/FibonacciTask/src/Helpers/NthFibonacciCalculator.php)** and add a new entry to our database
 
@@ -74,21 +74,20 @@ If no corresponding number/nthFib entry exists, we calulate the nth fibonacci of
 <img src="https://raw.githubusercontent.com/AmalH/FibonacciTask/master/readmeScreenshots/get_fibonacci_of_9.png"/>
 </p>
 
-- POST /fibonacciSet
+- #### POST /fibonacciSet
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/AmalH/FibonacciTask/master/readmeScreenshots/post_fibonacciSet.png"/>
 </p>
 
-- put /fibonacciSet/ : 
+- #### PUT /fibonacciSet/ : 
 
 let's update the nth fibonnaci of 9 that we added with the GET method to a wrong value !
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/AmalH/FibonacciTask/master/readmeScreenshots/update_fibonacciSet.png"/>
+<img src="https://raw.githubusercontent.com/AmalH/FibonacciTask/master/readmeScreenshots/update_fibonacci_of_9.png"/>
 </p>
 
-- 
 ## Project structure and code details
 
 Structuring this sample project as it is (fibonacci_api / src-Controller / src-Entity / src-Helpers / src-Repository), as well as specific code details can be discussed and explained in further communications.
